@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contate-nos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <header th:insert="~{navbar.html :: nav}"></header>
+    <main>
+
+        <div class="container-fluid" id="historia">
+            <div class="row justify-content-md-center align-items-center">
+                <div class="col-md-4 lead">
+                    <h1> Curiosidades Sobre Solar</h1>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Maecenas id auctor lectus, ac efficitur lacus. Pellentesque feugiat facilisis aliquam.
+                    Fusce nec ullamcorper purus. Nulla rhoncus, tellus ac laoreet commodo, magna lectus
+                    dignissim tellus, et efficitur odio orci at sapien. Sed nulla sem, luctus id tristique id,
+                    porttitor eget lectus.
+                </div>
+
+                <div class="col-md-4">
+                    <img th:src="@{/images/sistema-fotovoltaico.png}" width="600" height="400" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulário para cadastro de clientes -->
+        <center>
+            <h2>Entre em contato, tire dúvidas ou peça orçamento</h2>
+        </center>
+        <br>
+        <div>
+            <form class="row g-3" action="#" th:action="@{/registroContato}" th:object="${contato}" method="post">
+
+                <div class="container-fluid row justify-content-md-center">
+                    <div class="col-md-4">
+                        <label for="nomeContato" class="form-label">Seu Nome</label>
+                        <input type="text" class="form-control" id="nomeContato" maxlength="30" >
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="endereco" class="form-label">Seu Endereco</label>
+                        <input type="text" class="form-control" id="endereco" maxlength="60">
+                    </div>
+
+                </div>
+                <div class="container-fluid row justify-content-md-center">
+                    <div class="col-md-4">
+                        <label for="consumo" class="form-label">Seu consumo</label>
+                        <input type="number" class="form-control" id="consumo" min="1" max="10000">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="mensagem" class="form-label">Sua mensagem</label>
+                        <textarea class="form-control" rows="5" id="mensagem"  maxlength="255"></textarea>
+                        <br>
+                        <button type="submit" class="btn btn-warning">Enviar</button>
+                    </div>
+                </div>
+            </form>
+            
+            <br>
+            <br>
+
+        </div>
+        <footer>
+            <center>
+                <div th:insert="~{footer :: footer}"> </div>
+            </center>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página Inicial</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+  <header th:insert="~{navbar.html :: nav}"> </header>
+  <main>
+    <center>
+      <h3> A SeuSolar é PRA VOCÊ!</h3>
+    </center>
+    <!-- História da Empresa-->
+    <div class="container-fluid" id="historia">
+      <div class="row justify-content-md-center align-items-center">
+        <div class="col-md-4 lead">
+          <h1> Nossa História</h1>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Maecenas id auctor lectus, ac efficitur lacus. Pellentesque feugiat facilisis aliquam.
+          Fusce nec ullamcorper purus. Nulla rhoncus, tellus ac laoreet commodo, magna lectus
+          dignissim tellus, et efficitur odio orci at sapien. Sed nulla sem, luctus id tristique id,
+          porttitor eget lectus.
+        </div>
+        <div class="col-md-4">
+          <img th:src="@{/images/projeto1.jpg}" width="600" height="400" class="img-fluid">
+        </div>
+      </div>
+    </div>
+
+    </br>
+
+    <!-- Diferenciais -->
+    <div class="container-fluid mx-auto p-2" id="diferenciais">
+      <div class="row justify-content-md-center align-items-center">
+        <div class="col-md-4">
+          <img th:src="@{/images/equipe.webp}" width="600" height="400" class="img-fluid">
+        </div>
+        <div class="col-md-4 lead">
+          <h1> Diferenciais </h1>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Maecenas id auctor lectus, ac efficitur lacus. Pellentesque feugiat facilisis aliquam.
+          Fusce nec ullamcorper purus. Nulla rhoncus, tellus ac laoreet commodo, magna lectus
+          dignissim tellus, et efficitur odio orci at sapien. Sed nulla sem, luctus id tristique id,
+          porttitor eget lectus.
+        </div>
+      </div>
+    </div>
+
+    </br>
+
+    <!-- Portfólio-->
+    <div class="container-fluid" id="portifolio">
+      <div class="row justify-content-md-center align-items-center">
+        <div class="col-md-4 lead">
+          <h1> Projetos </h1>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Maecenas id auctor lectus, ac efficitur lacus. Pellentesque feugiat facilisis aliquam.
+          Fusce nec ullamcorper purus. Nulla rhoncus, tellus ac laoreet commodo, magna lectus
+          dignissim tellus, et efficitur odio orci at sapien. Sed nulla sem, luctus id tristique id,
+          porttitor eget lectus.
+          <a class="btn btn-warning btn-lg" th:href="@{'/portfolio'}">Saiba Mais</a>
+        </div>
+        <div class="col-md-4">
+          <img th:src="@{/images/projeto-2.webp}" width="600" height="400" class="img-fluid">
+        </div>
+      </div>
+    </div>
+    
+    <br>
+    <br>
+
+    <footer>
+      <center>
+          <div th:insert="~{footer :: footer}"> </div>
+      </center>
+  </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+          crossorigin="anonymous"></script>
+</body>
+
+</html>
